@@ -1,0 +1,47 @@
+<html>
+<head>
+
+    <style>
+	<%- include('../style/style'); %>
+    
+        </style>
+
+</head>
+<body>
+<%- include('../partials/header'); %>
+<h2>Incomes</h2>
+<table >
+    <tr>
+		<th>	Id			</th>
+        <th>	Date		</th>
+        <th>	Item	</th>
+        <th>	Amount		</th>
+		<th>	Action		</th>
+    </tr>
+		
+<% for(var i=0; i < result.length; i++) { %>
+   
+   <tr>
+		<td><%= result[i].id %></td>
+		<td><%= result[i].date %></td>
+		<td><%= result[i].item %></td>
+		<td><%= result[i].amount %></td>
+		<td>
+				<a href="/edit/<%= result[i].id %>">Edit</a><br>
+				<a href="/delete/<%= result[i].id %>">Delete</a>		
+		</td> 
+   </tr>
+   
+   
+<% } %>
+<tr>
+		<td colspan="3">Total Income</td>
+		<td ><%= Income %></td>
+   </tr>
+
+</table>
+<%- include('../partials/footer'); %>
+</body>
+
+
+</html>

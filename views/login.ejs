@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Expense Tracker</title>   
+			<style>
+				<%- include('./style/style'); %>
+		</style>	
+	</head>
+
+	<body>
+	 <%- include('./partials/header'); %>
+ <h2>Login</h2>
+	<form  method="post">
+         
+		<label for="email"> Email </label><br>
+			<input type="text" id="email" name="email" placeholder="Enter email...." <% if(typeof body !='undefined' && typeof body.email
+						!='undefined' ){ %>value="<%= body.email %>" <% } %>>
+								<% if(typeof emailError !='undefined' ){ %>
+								<%= emailError %>
+									<% } %>
+			<br><br>
+
+
+			<label for="password"> Password </label><br>
+			<input type="password" id="password" name="password" placeholder="Enter password...." <% if(typeof body !='undefined' && typeof body.password
+						!='undefined' ){ %>value="<%= body.password %>" <% } %>>
+								<% if(typeof passwordError !='undefined' ){ %>
+								<%= passwordError %>
+									<% } %>
+			<br><br>
+
+
+
+
+
+
+
+		  <button class="btn"> Submit</button>
+		  
+	
+	</form>
+				<%- include('./partials/footer'); %>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+  <head>
+		<title>Add Income </title> 
+
+	<style>
+				<%- include('../style/style'); %>
+	</style>
+  </head>
+
+  <body>
+  <%- include('../partials/header'); %>
+ <h2>Add Income</h2>
+  
+    <% if(typeof success !='undefined' ){ %>
+		<%= success %>
+			<% } %> <br><br>
+	
+	 <form  method="post">
+         
+			
+			
+              <label for="date"> Date </label><br>
+
+              <input type="date" id="date" name="date" placeholder="Enter date...."   
+			  <% if(typeof body !='undefined' && typeof body.date
+						!='undefined' ){ %>value="<%= body.date %>" <% } %>>
+								<% if(typeof dateError !='undefined' ){ %>
+								<%= dateError %>
+									<% } %>
+										<br><br>
+         
+		
+              <label for="item"> Item </label><br>
+              <input type="text" id="item" name="item" placeholder="Enter item...."  <% if(typeof body !='undefined' && typeof body.item
+						!='undefined' ){ %>value="<%= body.item %>" <% } %>>
+								<% if(typeof itemError !='undefined' ){ %>
+								<%= itemError %>
+									<% } %>
+										<br><br>
+		  
+         
+		 
+              <label for="amount">Amount  </label><br>
+              <input type="number" id="amount"  name="amount" placeholder="Enter amount..."
+			  
+			  <% if(typeof body !='undefined' && typeof body.amount
+						!='undefined' ){ %>value="<%= body.amount %>" <% } %>>
+			  
+		  
+							<% if(typeof amountError !='undefined' ){ %>
+								<%= amountError %>
+									<% } %>
+										<br><br>
+			  
+			  
+			  
+          
+          
+         
+		 <button class="btn"> Submit</button>
+      </form>
+
+   
+   
+   
+   
+   <%- include('../partials/footer'); %>
+ </body>
+</html>

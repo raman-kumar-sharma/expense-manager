@@ -1,0 +1,36 @@
+  <%- include('../partials/header'); %>
+	<style>
+		<%- include('../style/style');
+		%>
+	</style>
+
+<h2> Edit task</h2>
+	<form method="post">
+
+
+		<lable> date</lable><br>
+		<input type="date" id="date" name="date" value="<%= result.date %>" placeholder=" please fill date">
+		</input><br><br>
+
+
+		<lable>item</lable><br>
+		<input type="text" id="item" name="item" value="<%= result.item %>"
+			placeholder="please fill item">
+		</input><br><br>
+
+
+		<lable>amount</lable><br>
+		<input type="text" id="amount" name="amount" value="<%= result.amount %>"
+			placeholder=" please fill amount">
+		</input><br><br>
+
+
+
+		<button>submit</button>
+
+	</form>
+	<tr>
+
+
+
+		<%- include('../partials/footer'); %> 

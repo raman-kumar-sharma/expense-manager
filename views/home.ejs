@@ -1,0 +1,37 @@
+<html>
+  <head>
+		<title>Expense Tracker</title>   
+		<style>
+				<%- include('./style/style'); %>
+		</style>	
+  </head>
+
+  <body>
+  
+  <%- include('./partials/header'); %>
+     
+		<h2>Expense Tracker</h2>
+	
+		<div class="myDiv">
+			<a href="/addincome">Add income</a>
+		</div>
+		
+		<div class="myDiv">
+			<a href="/addexpense">Add expense</a>
+		</div>
+		
+		<div class="myDiv">
+			<a href="/expense">Expenses</a>
+		</div>
+		
+		
+		<div class="myDiv">
+			<a href="/income">incomes</a>
+		</div>
+		
+		
+		<button><a href="/logout">Logout</a> </button>
+   
+			<%- include('./partials/footer'); %>
+	</body>
+</html>
